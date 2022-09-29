@@ -24,7 +24,7 @@ Successful tested against:
 - Veeam Backup & Replication Version 10
 - Veeam Backup & Replication Version 11
 
-
+<br>
 
 # PowerCLI Installation Guide
 
@@ -32,17 +32,64 @@ What is PowerCLI?
 PowerCLI is a command-line interface for managing and automating all aspects of vSphere management, including networking, storage, VMs, guest OS, and more.
 PowerCLI functions as a collection of PowerShell modules that contain more than 700 cmdlets (commands) to manage VMware infrastructure. 
 
-**Prerequisite**
-PowerShell
+**Prerequisite** 
+
+## PowerShell
+
 PowerShell is installed by default with Windows OS or Windows Server. 
 
 Step1
 
-Install PowerCLI
+## Install PowerCLI
 
-Online
+**Online** 
 
 You can install PowerCLI directly from the ![PowerShell Gallery](https://www.powershellgallery.com/). 
-#Execute the command below to install VMware PowerCLI
 
+
+```powershell
+#Execute the command below to install VMware PowerCLI
 PS C:\> Install-Module -Name VMware.PowerCLI
+```
+
+**Offline** 
+
+1. Download the .zip file with the latest released PowerCLI version from [here](https://developer.vmware.com/docs/15743/).
+
+2. To retrieve the folder(s) on your machine that contain PowerShell modules, execute the following command
+
+```powershell
+PS C:\> $env:PSModulePath 
+```
+
+3. Extract the downloaded .zip file to one of the listed folders.
+
+4. Unblock the copied files.
+
+```powershell
+PS C:\> cd path_to_powershell_modules_folder Get-ChildItem * -Recurse | Unblock-File
+```
+
+
+5. Verify if the PowerCLI module is available on your system.
+
+```powershell
+PS C:\> Get-Module -Name VMware.PowerCLI -ListAvailable
+```
+<br>
+Step 2
+## Explore Cmdlets
+VMware PowerCLI consists of multiple modules that you can install and use according to your needs and environments. Usually modules correspond to a VMware product.
+
+[VIEW CMDLET REFERENCES BY PRODUCT](https://developer.vmware.com/docs/powercli/latest/products)
+
+<br>
+
+# Update PowerCLI
+
+Execute the following command to update PowerCLI. 
+```powershell
+PS C:\> Update-Module -Name VMware.PowerCLI
+```
+<br>
+Note: You cannot update the PowerCLI module online if you have installed it by the offline method. In this case, perform an offline installation of the latest PowerCLI version. 
