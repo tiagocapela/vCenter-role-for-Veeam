@@ -77,6 +77,7 @@ PS C:\> cd path_to_powershell_modules_folder Get-ChildItem * -Recurse | Unblock-
 PS C:\> Get-Module -Name VMware.PowerCLI -ListAvailable
 ```
 <br>
+
 Step 2
 ## Explore Cmdlets
 VMware PowerCLI consists of multiple modules that you can install and use according to your needs and environments. Usually modules correspond to a VMware product.
