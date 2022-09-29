@@ -23,3 +23,26 @@ Successful tested against:
 - VMware vCenter 7.0
 - Veeam Backup & Replication Version 10
 - Veeam Backup & Replication Version 11
+
+
+
+# PowerCLI Installation Guide
+
+What is PowerCLI?
+PowerCLI is a command-line interface for managing and automating all aspects of vSphere management, including networking, storage, VMs, guest OS, and more.
+PowerCLI functions as a collection of PowerShell modules that contain more than 700 cmdlets (commands) to manage VMware infrastructure. 
+
+**Prerequisite**
+PowerShell
+PowerShell is installed by default with Windows OS or Windows Server. 
+
+Step1
+
+Install PowerCLI
+
+Online
+
+You can install PowerCLI directly from the ![PowerShell Gallery](https://www.powershellgallery.com/). 
+#Execute the command below to install VMware PowerCLI
+
+PS C:\> Install-Module -Name VMware.PowerCLI
