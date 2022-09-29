@@ -92,11 +92,9 @@ Execute the following command to update PowerCLI.
 ```powershell
 PS C:\> Update-Module -Name VMware.PowerCLI
 ```
-<br>
+
 Note: You cannot update the PowerCLI module online if you have installed it by the offline method. In this case, perform an offline installation of the latest PowerCLI version. 
 
-<br>
-
-References
-[Vmware PowerCLi](https://developer.vmware.com/powercli)
+References: <br>
+[Vmware PowerCLi](https://developer.vmware.com/powercli) <br>
 [Thesysadminchannel Instal PowerCLi](https://thesysadminchannel.com/install-vmware-powercli-module-powershell/)
